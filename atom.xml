@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://knightl8.club</id>
     <title>Gridea</title>
-    <updated>2020-03-06T12:44:19.791Z</updated>
+    <updated>2020-03-06T12:45:48.296Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://knightl8.club"/>
     <link rel="self" href="https://knightl8.club/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://knightl8.club/images/avatar.png</logo>
     <icon>https://knightl8.club/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[数据结构]]></title>
+        <id>https://knightl8.club/post/shu-ju-jie-gou/</id>
+        <link href="https://knightl8.club/post/shu-ju-jie-gou/">
+        </link>
+        <updated>2020-03-06T12:44:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="什么是线性表">什么是线性表</h1>
+<p>&quot;线性表&quot;: 由同类型数据元素构成有序序列的线性结构</p>
+<p>表中元素个数成为线性表的长度</p>
+<p>线性表没有元素时,称为空表</p>
+<p>表起始位置称为表头,表结束位置称为表尾.</p>
+<h1 id="线性表的抽象数据类型表述">线性表的抽象数据类型表述</h1>
+<h2 id="类型名称-线性表list">类型名称: 线性表(List)</h2>
+<h2 id="数据对象集-线性表是n0个元素构成的有序序列a1a2an">数据对象集: 线性表是n(&gt;=0)个元素构成的有序序列(a1,a2,....an)</h2>
+<h2 id="操作集线性表l数与list整数i表示位置元素x数与elementtype">操作集:线性表L数与List,整数i表示位置,元素x数与ElementType</h2>
+<p>线性表基本操作主要有:</p>
+<p>1  		List MakeEmpty();初始化一个空线性表</p>
+<p>2		ElementType FindKth(int K,List L);	//根据位次序K,返回相应元素</p>
+<p>3		int Find(ElementType X,List L);		//在线性表L中查找X的第一次出现位置</p>
+<p>4		void Insert(ElementType X,int i,List l);	//在位序i前插入一个新元素X;</p>
+<p>5		vod Delete(int i,List L);		删除指定位序i的元素</p>
+<p>6		int Length(List L);			返回线性表L的长度n</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://knightl8.club/post/hello-gridea/</id>
