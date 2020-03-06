@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://knightl8.club</id>
     <title>Knight</title>
-    <updated>2020-03-06T14:13:09.604Z</updated>
+    <updated>2020-03-06T14:20:07.139Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://knightl8.club"/>
     <link rel="self" href="https://knightl8.club/atom.xml"/>
@@ -10,6 +10,70 @@
     <logo>https://knightl8.club/images/avatar.png</logo>
     <icon>https://knightl8.club/favicon.ico</icon>
     <rights>All rights reserved 2020, Knight</rights>
+    <entry>
+        <title type="html"><![CDATA[每日一题总结]]></title>
+        <id>https://knightl8.club/post/mei-ri-yi-ti-zong-jie/</id>
+        <link href="https://knightl8.club/post/mei-ri-yi-ti-zong-jie/">
+        </link>
+        <updated>2020-03-06T14:19:28.000Z</updated>
+        <content type="html"><![CDATA[<p>给定一个字符串，编写一个函数判定其是否为某个回文串的排列之一。</p>
+<blockquote>
+<p>示例 1：</p>
+<p>输入：&quot;tactcoa&quot;<br>
+输出：True<br>
+解释：排列有 &quot;tacocat&quot;、&quot;atcocta&quot;，等等</p>
+</blockquote>
+<blockquote>
+<p>示例 2：</p>
+<p>输入：&quot;abcda&quot;<br>
+输出：False</p>
+</blockquote>
+<p>我的思路:</p>
+<p>如果输入的字符串长度是偶数倍,所以每个字符的次数都是偶数倍</p>
+<p>如果输入的字符串长度是奇数倍,最多只能有一个字符的次数是奇数倍</p>
+<pre><code class="language-python">def f(n):
+    if len(n)%2==0:
+        flag = 1
+        d={}
+        for i in n:
+            d[i] = d.get(i,0)+1
+        for j in d.values():
+            if j%2==0:
+                continue
+            else:
+                flag = 0
+        if flag:
+            return 1
+        else:
+            return 0
+    else:
+        flag = 0
+        d={}
+        for j in n:
+            d[j] = d.get(j,0)+1
+        for i in d.values():
+            if i/2==0:
+                flag=0
+                continue
+            if i%2==1:
+                flag+=1
+        if flag&lt;=1:
+            return 1
+        else:
+            return 0
+                
+            
+        
+a = input()
+
+if f(a):
+    print(&quot;True&quot;)
+else:
+    print(&quot;False&quot;)
+最后一次
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1021个位数统计(15分)]]></title>
         <id>https://knightl8.club/post/1021-ge-wei-shu-tong-ji-15-fen/</id>
