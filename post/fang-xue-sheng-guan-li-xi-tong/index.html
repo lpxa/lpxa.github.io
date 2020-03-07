@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>每日一题总结 | Knight</title>
+<title>仿学生管理系统 | Knight</title>
 <meta name="description" content="持续性幻想做梦,间接性努力行动." />
 <link rel="shortcut icon" href="https://knightl8.club/favicon.ico">
 <link rel="stylesheet" href="https://knightl8.club/styles/main.css">
@@ -15,14 +15,14 @@
 <script src="https://knightl8.club/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://knightl8.club/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <meta name="description" content="给定一个字符串，编写一个函数判定其是否为某个回文串的排列之一。
-
-示例 1：
-输入：&quot;tactcoa&quot;
-输出：True
-解释：排列有 &quot;tacocat&quot;、&quot;atcocta&quot;，等等
-..." />
-    <meta name="keywords" content="python学习" />
+    <meta name="description" content="#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+typedef struct _node
+{
+char name[64];
+char ..." />
+    <meta name="keywords" content="c语言学习" />
     <script src="https://knightl8.club/media/js/waterfall.min.js"></script>
     <script src="https://knightl8.club/media/js/prism.min.js"></script>
   </head>
@@ -98,21 +98,21 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-03-06"><i class="fa fa-calendar"></i><span class="lately">16 小时前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-03-07"><i class="fa fa-calendar"></i><span class="lately">1 分钟前</span></time>
               
-              <a href="https://knightl8.club/post/mei-ri-yi-ti-zong-jie/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/mei-ri-yi-ti-zong-jie/"> </span>
+              <a href="https://knightl8.club/post/fang-xue-sheng-guan-li-xi-tong/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/fang-xue-sheng-guan-li-xi-tong/"> </span>
               </a>
-              <span id="/mei-ri-yi-ti-zong-jie/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/fang-xue-sheng-guan-li-xi-tong/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
               <div class="tags ">
                 
-                      <a href="https://knightl8.club/tag/7f2DsnimQ/" class="ctag ctag-0 ctag-7f2DsnimQ" aria-label="">python学习</a>
+                      <a href="https://knightl8.club/tag/74k4dp9vS/" class="ctag ctag-0 ctag-74k4dp9vS" aria-label="">c语言学习</a>
                     
               </div>
-              <h1 class="title ularge white bold">每日一题总结</h1>
+              <h1 class="title ularge white bold">仿学生管理系统</h1>
             </div>
           </div>
         </div>  
@@ -122,62 +122,290 @@
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p>给定一个字符串，编写一个函数判定其是否为某个回文串的排列之一。</p>
-<blockquote>
-<p>示例 1：</p>
-<p>输入：&quot;tactcoa&quot;<br>
-输出：True<br>
-解释：排列有 &quot;tacocat&quot;、&quot;atcocta&quot;，等等</p>
-</blockquote>
-<blockquote>
-<p>示例 2：</p>
-<p>输入：&quot;abcda&quot;<br>
-输出：False</p>
-</blockquote>
-<p>我的思路:</p>
-<p>如果输入的字符串长度是偶数倍,所以每个字符的次数都是偶数倍</p>
-<p>如果输入的字符串长度是奇数倍,最多只能有一个字符的次数是奇数倍</p>
-<pre><code class="language-python">def f(n):
-    if len(n)%2==0:
-        flag = 1
-        d={}
-        for i in n:
-            d[i] = d.get(i,0)+1
-        for j in d.values():
-            if j%2==0:
-                continue
-            else:
-                flag = 0
-        if flag:
-            return 1
-        else:
-            return 0
-    else:
-        flag = 0
-        d={}
-        for j in n:
-            d[j] = d.get(j,0)+1
-        for i in d.values():
-            if i/2==0:
-                flag=0
-                continue
-            if i%2==1:
-                flag+=1
-        if flag&lt;=1:
-            return 1
-        else:
-            return 0
-                
-            
-        
-a = input()
-
-if f(a):
-    print(&quot;True&quot;)
-else:
-    print(&quot;False&quot;)
-最后一次
-</code></pre>
+                  <p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>typedef struct _node</p>
+<p>{</p>
+<p>char name[64];</p>
+<p>char id[10];</p>
+<p>char score[64];</p>
+<p>struct _node *next;</p>
+<p>} Node;</p>
+<p>typedef struct _list</p>
+<p>{</p>
+<p>Node *head;</p>
+<p>} List;</p>
+<p>//--1--插入新的学生(头插法)</p>
+<p>void AddStudentByHead(List *list);</p>
+<p>//尾插法V1</p>
+<p>void AddStudentByEndV1(List *list);</p>
+<p>//尾插法V2只能单独使用</p>
+<p>void AddStudentByEndV2(List *list);</p>
+<p>void ChangeStudent(List *list, char *input);</p>
+<p>void Input(Node *p);</p>
+<p>int Search(List *list, char *input);</p>
+<p>void Delete(List *list, char *input);</p>
+<p>void PrintStudent(List *list);</p>
+<p>void ClearList(List *list);</p>
+<p>Node *PrintFlage(List *list, char *input);</p>
+<p>int main(void)</p>
+<p>{</p>
+<p>List list;</p>
+<p>list.head = NULL;</p>
+<p>char code;</p>
+<p>int c;</p>
+<p>char input1[64];</p>
+<p>char input2[64];</p>
+<p>char input3[64];</p>
+<p>int flag = 0;</p>
+<p>Node *temp;</p>
+<p>while (1)</p>
+<p>{</p>
+<p>​    printf(&quot;欢迎使用学生成绩管理系统\n&quot;);</p>
+<p>​    printf(&quot;----1.插入新的学生-----\n&quot;);</p>
+<p>​    printf(&quot;----2.查找已有学生----\n&quot;);</p>
+<p>​    printf(&quot;----3.更改学生--------\n&quot;);</p>
+<p>​    printf(&quot;----4.删除已有学生----\n&quot;);</p>
+<p>​    printf(&quot;----5.显示已有学生----\n&quot;);</p>
+<p>​    printf(&quot;----6.退出系统-------\n&quot;);</p>
+<p>​    printf(&quot;请输入指令代码(1-6)\n&quot;);</p>
+<p>​    do</p>
+<p>​    {</p>
+<p>​      scanf(&quot;%c&quot;, &amp;code);</p>
+<p>​    } while (code&gt;54||code&lt;49);</p>
+<p>​</p>
+<p>​    switch (code)</p>
+<p>​    {</p>
+<p>​    case '1':</p>
+<p>​      printf(&quot;请选择插入学生的方法(1-头插法 2-尾插法V1)😊;</p>
+<p>​      scanf(&quot;%d&quot;, &amp;c);</p>
+<p>​      switch (c)</p>
+<p>​      {</p>
+<p>​      case 1:</p>
+<p>​        AddStudentByHead(&amp;list);</p>
+<p>​        break;</p>
+<p>​      case 2:</p>
+<p>​        AddStudentByEndV1(&amp;list);</p>
+<p>​        break;</p>
+<p>​      default:</p>
+<p>​        printf(&quot;输入指令错误\n&quot;);</p>
+<p>​      }</p>
+<p>​      break;</p>
+<p>​    case '2':</p>
+<p>​      printf(&quot;请输入你要查找的学生:&quot;);</p>
+<p>​      scanf(&quot;%s&quot;, input1);</p>
+<p>​      flag = (Search(&amp;list, input1));</p>
+<p>​      if (flag &gt; 0)</p>
+<p>​      {</p>
+<p>​        temp = PrintFlage(&amp;list, input1);</p>
+<p>​        printf(&quot;学生姓名:%s\t学号%s\t分数:%s\t&quot;, temp-&gt;name, temp-&gt;id, temp-&gt;score);</p>
+<p>​      }</p>
+<p>​      else</p>
+<p>​      {</p>
+<p>​        printf(&quot;不好意思,查无此人\n&quot;);</p>
+<p>​      }</p>
+<p>​      break;</p>
+<p>​    case '3':</p>
+<p>​      printf(&quot;请输入你要更改的学生名字:&quot;);</p>
+<p>​      scanf(&quot;%s&quot;, input2);</p>
+<p>​      flag = Search(&amp;list, input2);</p>
+<p>​      temp = PrintFlage(&amp;list, input2);</p>
+<p>​      if (flag &gt; 0)</p>
+<p>​      {</p>
+<p>​        printf(&quot;当前的学生信息为:\n&quot;);</p>
+<p>​        printf(&quot;学生姓名:%s\t学号%s\t分数:%s\t&quot;, temp-&gt;name, temp-&gt;id, temp-&gt;score);</p>
+<p>​        printf(&quot;请输入您要更改的学生信息\n&quot;);</p>
+<p>​        ChangeStudent(&amp;list, input2);</p>
+<p>​      }</p>
+<p>​      else</p>
+<p>​      {</p>
+<p>​        printf(&quot;不好意思,你要更改的学生名字尚未存在\n&quot;);</p>
+<p>​      }</p>
+<p>​      break;</p>
+<p>​    case '4':</p>
+<p>​      printf(&quot;请输入你要删除的学生名字:&quot;);</p>
+<p>​      scanf(&quot;%s&quot;, input3);</p>
+<p>​      if (Search(&amp;list, input3) &gt; 0)</p>
+<p>​      {</p>
+<p>​        Delete(&amp;list, input3);</p>
+<p>​      }</p>
+<p>​      else</p>
+<p>​      {</p>
+<p>​        printf(&quot;不好意思,你要删除的学生名字尚未存在\n&quot;);</p>
+<p>​      }</p>
+<p>​      break;</p>
+<p>​    case '5':</p>
+<p>​      PrintStudent(&amp;list);</p>
+<p>​      break;</p>
+<p>​    case '6':</p>
+<p>​      if (!list.head)</p>
+<p>​      {</p>
+<p>​        printf(&quot;还没有信息呢\n&quot;);</p>
+<p>​      }</p>
+<p>​      goto END;</p>
+<p>​    default:</p>
+<p>​      printf(&quot;输入指令错误\n&quot;);</p>
+<p>​      break;</p>
+<p>​    }</p>
+<p>​    printf(&quot;<sup>__</sup>\n&quot;);</p>
+<p>​    printf(&quot;\n\n&quot;);</p>
+<p>}</p>
+<p>END:</p>
+<p>ClearList(&amp;list), printf(&quot;删库跑路成功<sup>__</sup>\n&quot;);</p>
+<p>system(&quot;pause&quot;);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>//--1--插入新的学生</p>
+<p>void AddStudentByHead(List *list)</p>
+<p>{</p>
+<p>Node *p, *temp;</p>
+<p>p = (Node *)malloc(sizeof(Node));</p>
+<p>Input(p);</p>
+<p>if (list-&gt;head)</p>
+<p>{</p>
+<p>​    temp = list-&gt;head;</p>
+<p>​    list-&gt;head = p;</p>
+<p>​    p-&gt;next = temp;</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>​    list-&gt;head = p;</p>
+<p>​    p-&gt;next = NULL;</p>
+<p>}</p>
+<p>}</p>
+<p>//尾插法</p>
+<p>void AddStudentByEndV1(List *list)</p>
+<p>{</p>
+<p>Node *p;</p>
+<p>p = (Node *)malloc(sizeof(Node ));</p>
+<p>Input(p);</p>
+<p>Node *last;</p>
+<p>last = list-&gt;head;</p>
+<p>if (last)</p>
+<p>{</p>
+<p>​    while (last-&gt;next)</p>
+<p>​    {</p>
+<p>​      last = last-&gt;next;</p>
+<p>​    }</p>
+<p>​    last-&gt;next = p;</p>
+<p>​    p-&gt;next=NULL;</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>​    list-&gt;head = p;</p>
+<p>​    p-&gt;next = NULL;</p>
+<p>}</p>
+<p>}</p>
+<p>//尾插法</p>
+<p>/*</p>
+<p>void AddStudentByEndV2(List *list)</p>
+<p>{</p>
+<p>Node *p;</p>
+<p>p = (Node *)malloc(sizeof(Node ));</p>
+<p>Input(p);</p>
+<p>static Node *tail;</p>
+<p>if (list-&gt;head)</p>
+<p>{</p>
+<p>​    tail=list-&gt;head;</p>
+<p>​    tail-&gt;next = p;</p>
+<p>​    p-&gt;next = NULL;</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>​    list-&gt;head = p;</p>
+<p>​    p-&gt;next = NULL;</p>
+<p>}</p>
+<p>tail = p;</p>
+<p>}</p>
+<p>*/</p>
+<p>void ChangeStudent(List *list, char *input)</p>
+<p>{</p>
+<p>Node *p;</p>
+<p>for (p = list-&gt;head; p; p = p-&gt;next)</p>
+<p>{</p>
+<p>​    if (!strcmp(p-&gt;name, input))</p>
+<p>​    {</p>
+<p>​      Input(p);</p>
+<p>​      break;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<p>void Input(Node *p)</p>
+<p>{</p>
+<p>printf(&quot;请输入姓名:&quot;);</p>
+<p>scanf(&quot;%s&quot;, p-&gt;name);</p>
+<p>printf(&quot;请输入学号(2位数字)😊;</p>
+<p>scanf(&quot;%s&quot;, p-&gt;id);</p>
+<p>printf(&quot;请输入学生分数(小于1000)😊;</p>
+<p>scanf(&quot;%s&quot;, p-&gt;score);</p>
+<p>}</p>
+<p>int Search(List *list, char *input)</p>
+<p>{</p>
+<p>int flag = -1; //标志</p>
+<p>Node *p;</p>
+<p>for (p = list-&gt;head; p; p = p-&gt;next)</p>
+<p>{</p>
+<p>​    if (!strcmp(p-&gt;name, input))</p>
+<p>​    {</p>
+<p>​      flag = 1;</p>
+<p>​      break;</p>
+<p>​    }</p>
+<p>}</p>
+<p>return flag;</p>
+<p>}</p>
+<p>Node *PrintFlage(List *list, char *input)</p>
+<p>{</p>
+<p>Node *p;</p>
+<p>for (p = list-&gt;head; p; p = p-&gt;next)</p>
+<p>{</p>
+<p>​    if (!strcmp(p-&gt;name, input))</p>
+<p>​    {</p>
+<p>​      break;</p>
+<p>​    }</p>
+<p>}</p>
+<p>return p;</p>
+<p>}</p>
+<p>void Delete(List *list, char *input)</p>
+<p>{</p>
+<p>Node *p, *q = NULL;</p>
+<p>for (p = list-&gt;head; p; q = p, p = p-&gt;next)</p>
+<p>{</p>
+<p>​    if (!strcmp(p-&gt;name,input))</p>
+<p>​    {</p>
+<p>​      if (q)</p>
+<p>​      {</p>
+<p>​        q-&gt;next = p-&gt;next;</p>
+<p>​</p>
+<p>​      }</p>
+<p>​      else</p>
+<p>​      {</p>
+<p>​        list-&gt;head = p-&gt;next;</p>
+<p>​      }</p>
+<p>​      free(p);</p>
+<p>​      break;</p>
+<p>​    }</p>
+<p>​</p>
+<p>}</p>
+<p>}</p>
+<p>void PrintStudent(List *list)</p>
+<p>{</p>
+<p>Node *p;</p>
+<p>for (p = list-&gt;head; p; p = p-&gt;next)</p>
+<p>{</p>
+<p>​    printf(&quot;学生姓名:%s\t学号:%s\t分数:%s\t\n&quot;, p-&gt;name, p-&gt;id, p-&gt;score);</p>
+<p>}</p>
+<p>}</p>
+<p>//--6--删库跑路</p>
+<p>void ClearList(List *list)</p>
+<p>{</p>
+<p>Node *p, *q;</p>
+<p>for (p = list-&gt;head; p; p = q)</p>
+<p>{</p>
+<p>​    q = p-&gt;next;</p>
+<p>​    free(p);</p>
+<p>}</p>
+<p>}</p>
 
                 </div>
                 <div class="clear"></div>
@@ -187,26 +415,13 @@ else:
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://knightl8.club/media/images/74k4dp9vS.jpg');"></div>
-                 <a href="https://knightl8.club/post/fang-xue-sheng-guan-li-xi-tong/" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2020-03-07">2020-03-07</time>
-                  <h4 class="title white no-margin">仿学生管理系统</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://knightl8.club/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
               
               <article class="next grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://knightl8.club/media/images/jfPSYdYxB.jpg');"></div>
-                 <a href="https://knightl8.club/post/1021-ge-wei-shu-tong-ji-15-fen/" class="full-link"></a>
+                <div class="thumb cover lazy loaded" style="background-image: url('https://knightl8.club/media/images/7f2DsnimQ.jpg');"></div>
+                 <a href="https://knightl8.club/post/mei-ri-yi-ti-zong-jie/" class="full-link"></a>
                  <div class="info">
                   <time datetime="2020-03-06">2020-03-06</time>
-                  <h4 class="title white no-margin">1021个位数统计(15分)</h4>
+                  <h4 class="title white no-margin">每日一题总结</h4>
                 </div>
                  <span class="epcl-button red">
                   <img src="https://knightl8.club/media/images/right-arrow.svg" width="15" alt="Left Arrow">
