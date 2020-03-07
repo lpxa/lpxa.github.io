@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://knightl8.club</id>
     <title>Knight</title>
-    <updated>2020-03-07T06:15:07.367Z</updated>
+    <updated>2020-03-07T06:44:19.888Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://knightl8.club"/>
     <link rel="self" href="https://knightl8.club/atom.xml"/>
@@ -56,13 +56,21 @@
 <p>Node *temp;</p>
 <p>while (1)</p>
 <p>{</p>
-<p>​    printf(&quot;欢迎使用学生成绩管理系统\n&quot;);</p>
-<p>​    printf(&quot;----1.插入新的学生-----\n&quot;);</p>
-<p>​    printf(&quot;----2.查找已有学生----\n&quot;);</p>
-<p>​    printf(&quot;----3.更改学生--------\n&quot;);</p>
-<p>​    printf(&quot;----4.删除已有学生----\n&quot;);</p>
-<p>​    printf(&quot;----5.显示已有学生----\n&quot;);</p>
-<p>​    printf(&quot;----6.退出系统-------\n&quot;);</p>
+<p>​<br>
+​ printf(&quot;\n<br>
+╔———————————————学生信息管理系统————————————————╗\n<br>
+\n<br>
+=============== 功能菜单 ================\n<br>
+\n<br>
+1 录入学生信息\n<br>
+2 查找学生信息\n<br>
+4 删除学生信息\n<br>
+3 修改学生信息\n<br>
+5 显示所有学生信息\n<br>
+6 退出系统\n<br>
+==========================================\n<br>
+说明：通过数字选择菜单\n<br>
+╚——————————————————————————————————————————————╝\n&quot;);</p>
 <p>​    printf(&quot;请输入指令代码(1-6)\n&quot;);</p>
 <p>​    do</p>
 <p>​    {</p>
